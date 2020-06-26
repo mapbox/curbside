@@ -1,0 +1,18 @@
+{
+  "name": "curbside-internal",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "prep": "node ./prep/index.js",
+    "postinstall": "python3 -m pip install mapbox-tilesets",
+    "geofence": "./prep/geofence.sh"
+  },
+  "author": "",
+  "license": "BSD-3-Clause",
+  "dependencies": {
+    "axios": "^0.19.2",
+    "bottleneck": "^2.19.5",
+    "csvtojson": "^2.0.10"
+  }
+}

@@ -1,0 +1,17 @@
+{
+    "version": 1,
+    "layers": {
+      "geofences": {
+        "source": "mapbox://tileset-source/username/tilesetid",
+        "minzoom": 7,
+        "maxzoom": 12,
+        "features": {
+          "simplification": [ "match", [ "zoom" ], 10, 0, 4 ]
+        },
+        "tiles": {
+          "order": "index"
+        }
+      }
+    }
+  }
+  

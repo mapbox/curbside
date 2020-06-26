@@ -1,0 +1,42 @@
+@keyframes circle--animation {
+  0%,
+  25% {
+    stroke-dashoffset: 270;
+    transform: rotate(0);
+  }
+
+  50%,
+  75% {
+    stroke-dashoffset: 90;
+    transform: rotate(45deg);
+  }
+
+  100% {
+    stroke-dashoffset: 270;
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes svg--animation {
+  0% {
+    transform: rotateZ(0deg);
+  }
+  100% {
+    transform: rotateZ(360deg);
+  }
+}
+
+svg {
+  animation: 2s linear infinite svg--animation;
+  max-width: 24px;
+}
+
+circle {
+  fill: transparent;
+  stroke: #777;
+  stroke-width: 10;
+  stroke-linecap: round;
+  stroke-dasharray: 283;
+  transform-origin: 50% 50%;
+  animation: 1.2s ease-in-out infinite both circle--animation;
+}

@@ -1,0 +1,6 @@
+node_modules
+prep/locations.json
+*.geojson
+Pulumi.*.yaml
+.DS_Store
+isochrones/recipe.json

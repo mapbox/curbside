@@ -1,0 +1,14 @@
+table {
+  border-collapse: collapse;
+}
+
+td,
+th {
+  border: solid 1px #777;
+  padding: 0.5rem;
+  text-align: left;
+}
+
+tr.here {
+  background-color: springgreen;
+}
