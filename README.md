@@ -99,7 +99,7 @@ export MAPBOX_ACCESS_TOKEN =<sk token for use with Tilesets API>
 export MAPBOX_API_TOKEN=<pk token for use with Isochrones API>
 ```
 
-> Note: This process requires the use of a secret (sk) token. Please read our [Using Mapbox Securely Guide](https://docs.mapbox.com/help/troubleshooting/how-to-use-mapbox-securely/#access-tokens) for guidance on securing these tokens.
+> Note: This process requires the use of a secret (sk) token. Do not commit this token into version control. Please read our [Using Mapbox Securely Guide](https://docs.mapbox.com/help/troubleshooting/how-to-use-mapbox-securely/#access-tokens) for guidance on securing these tokens.
 
 If you have a file of locations (with coordinates), run `npm run prep` to create isochrones. Alternatively, you can run `npm run geofence USERNAME TILESETID` to create isochrones and tile that data with the Mapbox Tiling Service. Default rings are 3 and 20 minutes. The extra arguments specify your Mapbox username and the tileset ID you would like to update.
 
