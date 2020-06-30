@@ -48,7 +48,7 @@ let endpoint = new awsx.apigateway.API("curbside", {
         //This should be looked up from somewhere else - perhaps the customer's chosen store
         const destination = [-122.258069, 47.450118].join(",");
         const coordinates = [origin, destination].join(";");
-        const url = `https://api.mapbox.com/directions/v5/mapbox/driving-traffic/${coordinates}?access_token=${mapboxToken}`;
+        const url = `https://api.mapbox.com/directions/v5/mapbox/driving-traffic/${coordinates}?access_token=${mapboxToken}&pluginName=curbside`;
         const route = await axios(url);
         const eta = route.data.routes[0].duration / 60;
         const minutes = parseFloat(eta.toFixed(2));
@@ -222,7 +222,7 @@ let endpoint = new awsx.apigateway.API("curbside", {
         const data = await ddb.get(getParams).promise();
         const keys = Object.keys(data.Item);
         //Query for isochrones
-        const url = `https://api.mapbox.com/v4/${geofenceID}/tilequery/${origin}.json?access_token=${mapboxToken}`;
+        const url = `https://api.mapbox.com/v4/${geofenceID}/tilequery/${origin}.json?access_token=${mapboxToken}&pluginName=curbside`;
         const geofence = await axios(url);
         const features = geofence.data.features;
         //Filter for Selected Store isochrone

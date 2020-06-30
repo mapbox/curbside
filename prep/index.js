@@ -24,7 +24,7 @@ function isochrone(data) {
     let id = place.id;
     let origin = coordinates.join(",");
     let tick = i;
-    let request = `${baseUrl}${profile}${origin}?contours_minutes=${minutes}&polygons=true&access_token=${token}`;
+    let request = `${baseUrl}${profile}${origin}?contours_minutes=${minutes}&polygons=true&access_token=${token}?pluginName=curbside`;
 
     return limiter
       .schedule(() => axios.get(request))
