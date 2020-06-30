@@ -9,7 +9,7 @@
     "geofence": "./prep/geofence.sh"
   },
   "author": "",
-  "license": "BSD-3-Clause",
+  "license": "BSD-2-Clause",
   "dependencies": {
     "axios": "^0.19.2",
     "bottleneck": "^2.19.5",
