@@ -50,8 +50,11 @@ This solution provides you with the following:
 ## How it works
 
 Step 0: The scripts in `prep` and `isochrones` will take in a CSV and create data that is ready to be processed with the Mapbox Tiling Service for geofencing. It also includes a sample recipe to use with the Mapbox Tilesets API. To test - run `npm run geofence`.
+
 Step 1: Deploy the infrastructure with Pulumi (from /infrastructure) - `pulumi up`.
+
 Step 2: Grab the integration URL
+
 Step 3: Copy into your application and deliver packages.
 
 > Note: if you are actively editing or updating the infrastructure, you can use `pulumi watch` to update your stack on save. Also, each portion of the project (root, infrastructure, and client) has their own set of independently managed dependencies. `npm install` at the root will not install the correct files for `infrastructure` to work.
